@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/tredingRepoListImage"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tredingRepoListUserName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/tredingRepoListImage"
+        android:background="@drawable/rounded_views_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tredingRepoListImage"
+        app:layout_constraintTop_toTopOf="@+id/tredingRepoListImage" />
+
+    <TextView
+        android:id="@+id/tredingRepoListRepoName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_below="@+id/tredingRepoListUserName"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_toEndOf="@id/tredingRepoListImage"
+        android:background="@drawable/rounded_views_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tredingRepoListUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tredingRepoListUserName" />
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tredingRepoListImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

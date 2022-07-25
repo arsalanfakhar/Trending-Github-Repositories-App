@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/tredingRepoListImage"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tredingRepoListUserName"
+        style="@style/SubHeadingStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/tredingRepoListImage"
+        tools:text="temaus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tredingRepoListImage"
+        app:layout_constraintTop_toTopOf="@+id/tredingRepoListImage" />
+
+    <TextView
+        android:id="@+id/tredingRepoListRepoName"
+        style="@style/HeadingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tredingRepoListUserName"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/tredingRepoListImage"
+        tools:text="temaus"
+        app:layout_constraintStart_toStartOf="@+id/tredingRepoListUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tredingRepoListUserName" />
+
+
+    <LinearLayout
+        android:id="@+id/expandableLayout"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tredingRepoListRepoName"
+        app:layout_constraintTop_toBottomOf="@+id/tredingRepoListImage">
+
+        <TextView
+            android:id="@+id/tredingRepoListDescription"
+            style="@style/SubHeadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text . "
+            android:maxLines="3"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/blue_circle_bg"/>
+
+            <TextView
+                android:id="@+id/tredingRepoLanguageTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                style="@style/SubHeadingStyle"
+                tools:text="Python"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:src="@drawable/ic_baseline_star_24"/>
+            <TextView
+                android:id="@+id/tredingRepoStarCount"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_height="wrap_content"
+                style="@style/SubHeadingStyle"
+                tools:text="115"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandableLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
